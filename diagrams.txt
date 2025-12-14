@@ -1,0 +1,30 @@
+@startuml
+
+class User {
+  +id: int
+  +username: str
+  +email: str
+  +password_hash: str
+  +role: enum
+}
+
+class Document {
+  +id: int
+  +user_id: int
+  +file_path: str
+  +hash: str
+  +uploaded_at: date
+}
+
+class Verification {
+  +id: int
+  +document_id: int
+  +verifier_ip: str
+  +status: enum
+  +verified_at: date
+}
+
+User "1" -- "1..*" Document
+Document "1" -- "1..*" Verification
+
+@enduml

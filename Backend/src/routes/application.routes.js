@@ -1,0 +1,1 @@
+// Здесь реализовывается /api/applications, /api/applications/:id
